@@ -22,17 +22,15 @@ export default function MacbookModel14(props) {
     texture.colorSpace = SRGBColorSpace;
       texture.needsUpdate = true;
 
-  useEffect(() => {
-    scene.traverse((child) => {
-        if (child.isMesh) {
-            
-
-            if (!noChangeParts.includes(child.name)) {
-                child.material.color = new Color(color);
-            }
-        }
-    })
-}, [color, scene]);
+ useEffect(() => {
+         scene.traverse((child) => {
+             if (child.isMesh) {
+                 if (!noChangeParts.includes(child.name)) {
+                     child.material.color = new Color(color);
+                 }
+             }
+         });
+     }, [color, scene]);
 
 
 

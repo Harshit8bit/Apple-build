@@ -30,7 +30,7 @@ const ModelScroll = () => {
 
             v.load();
         })
-    }, []);
+    }, []); 
 
     useGSAP(() => {
         // 3D MODEL ROTATION ANIMATION
@@ -93,7 +93,7 @@ const Features = () => {
 
             <Canvas id="f-canvas" camera={{}}>
                 <StudioLights />
-                <ambientLight intensity={0.5} />
+                <ambientLight intensity={0.75} />
                 <ModelScroll />
             </Canvas>
 
